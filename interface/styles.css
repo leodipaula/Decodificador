@@ -1,0 +1,234 @@
+:root {
+    --cor-dark-blue: #0A3871;
+    --cor-gray-400: #495057;
+    --cor-gray-500: #343A40;
+    --cor-light-blue: #F3F5FC;
+    --cor-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-light-blue);
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.area__decodificacao {
+    display: flexbox;
+    align-items: flex-start;
+    margin-bottom: 320px;
+}
+
+textarea {
+    color: var(--cor-dark-blue);
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+    display: flex;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding-top: 10px;
+    width: 680px;
+    height: 350px;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.posicao__logo {
+    align-self: flex-start;
+    margin-bottom: 16px;
+    margin-top: 40px;
+}
+
+.logo {
+    width: 120px;
+    height: 48px;
+}
+
+.aviso {
+    color: var(--cor-gray-400);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.8;
+}
+
+.resultado {
+    background-color: var(--cor-white);
+    width: 400px;
+    height: 944px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin-right: 40px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 700px;
+    overflow-y: auto;
+}
+
+.background {
+    box-sizing: border-box;
+    display: flexbox;
+    position: relative;
+    padding-top: 270px;
+}
+
+.resultado__imagem {
+    width: 336px;
+    height: 304px;
+    flex-shrink: 0;
+    margin-top: 40px;
+}
+
+.par1__resultado {
+    color: var(--cor-gray-500);
+    align-self: stretch;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.par__resultado {
+    color: var(--cor-gray-400);
+    align-self: stretch;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.div__aviso {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.resultado__mensagens {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.botoes {
+    display: flex;
+    width: 680px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.button__criptografar {
+    display: flex;
+    width: 328px;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: var(--cor-dark-blue, #0A3871);
+    border: 1px solid var(--cor-dark-blue, #0A3871);
+    color: var(--cor-white);
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button__criptografar:hover {
+    background: #D8DFE8;
+    color: var(--cor-dark-blue);
+}
+
+.button__descriptografar {
+    display: flex;
+    width: 328px;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid var(--cor-dark-blue, #0A3871);
+    background: #D8DFE8;
+    color: var(--cor-dark-blue);
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button__descriptografar:hover {
+    background: var(--cor-dark-blue, #0A3871);
+    color: var(--cor-white);
+}
+
+.button__copiar {
+    display: flex;
+    width: 328px;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid var(--cor-dark-blue, #0A3871);
+    background: #D8DFE8;
+    color: var(--cor-dark-blue);
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button__copiar:hover {
+    background: var(--cor-dark-blue, #0A3871);
+    color: var(--cor-white);
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .area__decodificacao {
+        max-width: 50%;
+    }
+
+    .resultado {
+        max-width: none;
+    }
+}
