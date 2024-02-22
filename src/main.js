@@ -12,6 +12,7 @@ buttonCriptografar.addEventListener('click', function () {
     resultadoMessage.style.fontSize = "24px";
     resultadoMessage.style.color = "#343A40";
     if (verificarTexto(texto)) {
+        resultadoTitle.style.display = 'none';
         return resultadoMessage.textContent = "O texto não pode conter caracter especial ou acentos";
     }
     const textoCriptografado = criptografarTexto(texto);
@@ -41,6 +42,7 @@ buttonDescriptografar.addEventListener('click', function () {
     resultadoMessage.style.fontSize = "24px";
     resultadoMessage.style.color = "#343A40";
     if (verificarTexto(texto)) {
+        resultadoTitle.style.display = 'none';
         return resultadoMessage.textContent = "O texto não pode conter caracter especial ou acentos";
     }
     const textoDescriptografado = descriptografarTexto(texto);
