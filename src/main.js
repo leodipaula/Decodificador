@@ -7,14 +7,23 @@ const buttonCopiar = document.getElementById('button__copiar');
 
 buttonCriptografar.addEventListener('click', function () {
     const texto = document.querySelector('textarea').value.toLowerCase();
-    const textoCriptografado = criptografarTexto(texto);
-    resultadoTitle.textContent = 'Texto Criptografado:';
+    imagemResultado.style.display = 'none';
     resultadoMessage.style.fontFamily = "Inter";
     resultadoMessage.style.fontSize = "24px";
-    resultadoMessage.style.color = "#0A3871";
+    resultadoMessage.style.color = "#343A40";
+    if (verificarTexto(texto)) {
+        return resultadoMessage.textContent = "O texto não pode conter caracter especial ou acentos";
+    }
+    const textoCriptografado = criptografarTexto(texto);
+    resultadoTitle.textContent = 'Texto Criptografado:';
     resultadoMessage.textContent = textoCriptografado;
-    imagemResultado.style.display = 'none';
+
 });
+
+function verificarTexto(texto) {
+    const regex = /[\u0300-\u036f\u00b4\u0060\u005e\u007e\u00a8\u00b8\u00b0\u00a8\u00b4\u00c2-\u00cf\u00d4-\u00db\u00e2-\u00ef\u00f4-\u00fb\u00fd\u00ff]/g;
+    return regex.test(texto);
+}
 
 function criptografarTexto(texto) {
     return texto.trim()
@@ -27,13 +36,16 @@ function criptografarTexto(texto) {
 
 buttonDescriptografar.addEventListener('click', function () {
     const texto = document.querySelector('textarea').value.toLowerCase();
-    const textoDescriptografado = descriptografarTexto(texto);
-    resultadoTitle.textContent = 'Texto Criptografado:';
+    imagemResultado.style.display = 'none';
     resultadoMessage.style.fontFamily = "Inter";
     resultadoMessage.style.fontSize = "24px";
-    resultadoMessage.style.color = "#0A3871";
+    resultadoMessage.style.color = "#343A40";
+    if (verificarTexto(texto)) {
+        return resultadoMessage.textContent = "O texto não pode conter caracter especial ou acentos";
+    }
+    const textoDescriptografado = descriptografarTexto(texto);
+    resultadoTitle.textContent = 'Texto Criptografado:';
     resultadoMessage.textContent = textoDescriptografado;
-    imagemResultado.style.display = 'none';
 });
 
 function descriptografarTexto(texto) {
